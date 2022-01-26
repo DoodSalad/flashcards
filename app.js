@@ -6,6 +6,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cookieParser());
+app.use('/static', express.static('public'));
 
 // This configures pug as the view engine allowing us to use .pug files to create out HTML.
 app.set('view engine', 'pug');
